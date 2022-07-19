@@ -1,0 +1,17 @@
+# стенд, на котором будет разворачиваться веб-приложение
+env: 'prod'
+# выделение ресурсов
+deployment:
+  appContainer:
+    resources:
+      requests:
+        memory: '1G'
+        cpu: '200m'
+      limits:
+        memory: '128M'
+        cpu: '0.1'
+# кол-во реплик
+hpa:
+  enabled: false
+  minReplicas: '4'
+  maxReplicas: '5'
